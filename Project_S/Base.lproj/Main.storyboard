@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Confirm View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConfirmViewController" customModule="Project_S" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mario1.png" translatesAutoresizingMaskIntoConstraints="NO" id="CGT-DP-3cf">
+                                <rect key="frame" x="180" y="28" width="240" height="212"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kV2-1F-LKp"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="this area is for using descriptions" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X2S-RF-04e">
+                                <rect key="frame" x="180" y="248" width="240" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5rg-4U-eo8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psb-aR-y9d">
+                                <rect key="frame" x="180" y="342" width="240" height="62"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.61194944381713867" green="0.92325127124786377" blue="0.71058154106140137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="L5D-kI-c9V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Enter"/>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CGT-DP-3cf" firstAttribute="trailing" secondItem="X2S-RF-04e" secondAttribute="trailing" id="6Ke-mN-8XV"/>
+                            <constraint firstItem="Psb-aR-y9d" firstAttribute="top" secondItem="X2S-RF-04e" secondAttribute="bottom" constant="64" id="94M-RE-605"/>
+                            <constraint firstItem="CGT-DP-3cf" firstAttribute="leading" secondItem="X2S-RF-04e" secondAttribute="leading" id="IDp-1s-ac5"/>
+                            <constraint firstItem="X2S-RF-04e" firstAttribute="trailing" secondItem="Psb-aR-y9d" secondAttribute="trailing" id="K5s-Sj-ACI"/>
+                            <constraint firstItem="X2S-RF-04e" firstAttribute="top" secondItem="CGT-DP-3cf" secondAttribute="bottom" constant="8" symbolic="YES" id="QVs-gU-caB"/>
+                            <constraint firstItem="CGT-DP-3cf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SAV-y5-Itt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Psb-aR-y9d" secondAttribute="bottom" constant="196" id="WNI-rq-c8j"/>
+                            <constraint firstItem="CGT-DP-3cf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="bat-3m-c63"/>
+                            <constraint firstItem="X2S-RF-04e" firstAttribute="leading" secondItem="Psb-aR-y9d" secondAttribute="leading" id="qdD-eX-LxU"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="400"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mario1.png" width="1105" height="1501"/>
+    </resources>
 </document>

@@ -433,6 +433,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="back"/>
+                                <connections>
+                                    <segue destination="BOS-9k-zv5" kind="show" identifier="favouriteToMain" id="WT0-cD-365"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Vol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLJ-Pp-sjg">
                                 <rect key="frame" x="319" y="556" width="24" height="21"/>
@@ -464,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8bF-6J-tsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2561" y="1132"/>
+            <point key="canvasLocation" x="2561" y="1249"/>
         </scene>
     </scenes>
     <resources>
@@ -473,6 +476,6 @@
         <image name="mario1.png" width="1105" height="1501"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zlb-QO-fEb"/>
+        <segue reference="WT0-cD-365"/>
     </inferredMetricsTieBreakers>
 </document>

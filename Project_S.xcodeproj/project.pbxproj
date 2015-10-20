@@ -23,6 +23,7 @@
 		0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		0D65DB801BD6DDEF00BF6102 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0D65DB821BD6EB9100BF6102 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSwitchViewController.swift; sourceTree = "<group>"; };
 		0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */,
 				0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */,
 				0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */,
+				0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				0D65DB591BD6B80800BF6102 /* ConfirmViewController.swift in Sources */,
 				0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */,
 				0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */,
+				0D65DB821BD6EB9100BF6102 /* FavouriteViewController.swift in Sources */,
 				0D65DB571BD6B80800BF6102 /* AppDelegate.swift in Sources */,
 				0D65DB801BD6DDEF00BF6102 /* mainViewController.swift in Sources */,
 			);

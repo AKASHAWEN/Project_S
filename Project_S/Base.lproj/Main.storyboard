@@ -330,6 +330,11 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ce-Pb-7LZ">
+                                <rect key="frame" x="149" y="240" width="303" height="302"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -337,6 +342,7 @@
                             <constraint firstItem="yLS-eY-UcV" firstAttribute="height" secondItem="vLe-2p-kiS" secondAttribute="height" id="GO0-lv-KRi"/>
                             <constraint firstItem="yLS-eY-UcV" firstAttribute="leading" secondItem="y9d-f0-ZJ4" secondAttribute="trailing" constant="8" id="Iii-QL-wmj"/>
                             <constraint firstItem="KZS-Qb-FwE" firstAttribute="leading" secondItem="yLS-eY-UcV" secondAttribute="trailing" constant="8" id="bkG-bg-U3c"/>
+                            <constraint firstItem="0Ce-Pb-7LZ" firstAttribute="centerX" secondItem="7wg-Pj-9Fh" secondAttribute="centerX" id="cX4-A7-nEm"/>
                             <constraint firstItem="vLe-2p-kiS" firstAttribute="leading" secondItem="7wg-Pj-9Fh" secondAttribute="leadingMargin" constant="8" id="eS9-ja-wLI"/>
                             <constraint firstItem="KZS-Qb-FwE" firstAttribute="height" secondItem="vLe-2p-kiS" secondAttribute="height" id="vre-2G-CEs"/>
                             <constraint firstItem="y9d-f0-ZJ4" firstAttribute="leading" secondItem="vLe-2p-kiS" secondAttribute="trailing" constant="8" id="x0m-RE-57F"/>

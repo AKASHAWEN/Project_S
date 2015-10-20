@@ -21,6 +21,7 @@
 		0D65DB781BD6CD7A00BF6102 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB761BD6CD7A00BF6102 /* green.png */; settings = {ASSET_TAGS = (); }; };
 		0D65DB7A1BD6CDF000BF6102 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB791BD6CDF000BF6102 /* red.png */; settings = {ASSET_TAGS = (); }; };
 		0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0D65DB761BD6CD7A00BF6102 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		0D65DB791BD6CDF000BF6102 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSwitchViewController.swift; sourceTree = "<group>"; };
+		0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				0D65DB581BD6B80800BF6102 /* ConfirmViewController.swift */,
 				0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */,
+				0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				0D65DB5F1BD6B80800BF6102 /* Project_S.xcdatamodeld in Sources */,
 				0D65DB591BD6B80800BF6102 /* ConfirmViewController.swift in Sources */,
 				0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */,
+				0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */,
 				0D65DB571BD6B80800BF6102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

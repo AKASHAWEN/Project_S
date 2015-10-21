@@ -33,7 +33,11 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.language1TableView.dataSource = self
+        self.language1TableView.delegate = self
+        
+        self.language2TableView.dataSource = self
+        self.language2TableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,22 +49,87 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
 
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        
+        if(tableView == self.language1TableView) {
+            
+            return 4
+        }
+            
+        else if(tableView == self.language2TableView) {
+            
+            return 4
+        }
+        
+        else {
+           return 4
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        
+        if(tableView == self.language1TableView) {
+            
+            return 1
+        }
+            
+        else if(tableView == self.language2TableView) {
+            
+            return 1
+        }
+        
+        else {
+            return 1
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        if(tableView == self.language1TableView) {
+            
+            let cell1 = tableView.dequeueReusableCellWithIdentifier("language1Cell", forIndexPath: indexPath)
+            
+            cell1.textLabel?.text = "cell1 has to be long long long"
+            return cell1
+        }
         
-        return cell
+        else if(tableView == self.language2TableView) {
+            
+            let cell2 = tableView.dequeueReusableCellWithIdentifier("language2Cell", forIndexPath: indexPath)
+            
+            cell2.textLabel?.text = "cell2 has to be long long long"
+            return cell2
+        }
+        
+        else {
+            
+            let cell = UITableViewCell()
+            return cell
+        }
+        
+        
     }
     
+    //select cell change background and change setting for next segue
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if(tableView == self.language1TableView) {
+            
+            let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+            selectedCell.contentView.backgroundColor = UIColor.redColor()
+        }
+            
+        else if(tableView == self.language2TableView) {
+            
+            let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+            selectedCell.contentView.backgroundColor = UIColor.redColor()
+        }
+
+        
+        
+        
+//        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+//        selectedCell.contentView.backgroundColor = UIColor.redColor()
+
     }
     /*
     // MARK: - Navigation

@@ -11,6 +11,22 @@ import UIKit
 class ConfirmViewController: UIViewController {
 
     override func viewDidLoad() {
+        //first load check
+        let notFirstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
+        if notFirstLaunch  {
+            print("Not first launch.")
+        }
+        else {
+            print("First launch, load data into core data")
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
+            
+            let dataLoading = DataLoad()
+            dataLoading.loadDataIntoApp()
+            
+        }
+        
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

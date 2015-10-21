@@ -9,7 +9,27 @@
 import UIKit
 
 class LanguageSwitchViewController: UIViewController {
+    @IBOutlet weak var language1Label: UILabel!
+    @IBOutlet weak var language2Label: UILabel!
+    @IBOutlet weak var language1Btn: UIButton!
+    @IBOutlet weak var language2Btn: UIButton!
+    @IBOutlet weak var languageGoBtn: UIButton!
 
+    @IBAction func language1Btn(sender: UIButton) {
+        
+    }
+    
+    @IBAction func language2Btn(sender: UIButton) {
+        
+    }
+    
+    @IBAction func languageGoBtn(sender: UIButton) {
+        
+    }
+    
+    @IBOutlet weak var language1TableView: UITableView!
+    @IBOutlet weak var language2TableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

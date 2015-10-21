@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VTI-aQ-MN6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -119,12 +119,18 @@
                                 <animations/>
                                 <color key="backgroundColor" red="0.16732382774353027" green="0.34138226509094238" blue="0.93482929468154907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="drop"/>
+                                <connections>
+                                    <action selector="language1Btn:" destination="JPb-yZ-t05" eventType="touchUpInside" id="Rxg-Ik-Qhr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHq-Hw-B6T">
                                 <rect key="frame" x="360" y="550" width="32" height="30"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.16732382774353027" green="0.34138226509094238" blue="0.93482929468154907" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="drop"/>
+                                <connections>
+                                    <action selector="language2Btn:" destination="JPb-yZ-t05" eventType="touchUpInside" id="RZo-4W-Mtj"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Hc-kg-ACY">
                                 <rect key="frame" x="120" y="52" width="362" height="241"/>
@@ -143,6 +149,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="go"/>
                                 <connections>
+                                    <action selector="languageGoBtn:" destination="JPb-yZ-t05" eventType="touchUpInside" id="Tmm-if-Y6K"/>
                                     <segue destination="2HY-lk-ZiJ" kind="show" identifier="languageSwitchToSettings" id="Opp-dt-42e"/>
                                 </connections>
                             </button>
@@ -177,6 +184,15 @@
                             <constraint firstAttribute="bottom" secondItem="y6f-Fq-pdZ" secondAttribute="bottom" constant="20" symbolic="YES" id="tpU-fe-9Ap"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="language1Btn" destination="Lae-Bm-bu3" id="HfA-HL-iQn"/>
+                        <outlet property="language1Label" destination="rU4-td-0Pd" id="uFF-to-anY"/>
+                        <outlet property="language1TableView" destination="4Hc-kg-ACY" id="V5M-dj-kWY"/>
+                        <outlet property="language2Btn" destination="xHq-Hw-B6T" id="v1F-hm-BCu"/>
+                        <outlet property="language2Label" destination="y6f-Fq-pdZ" id="WC0-kB-CWB"/>
+                        <outlet property="language2TableView" destination="j5j-q2-pUI" id="03r-HS-rIG"/>
+                        <outlet property="languageGoBtn" destination="DoY-8K-3F3" id="Fi4-jb-KUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXD-7a-iYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

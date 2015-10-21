@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LanguageSwitchViewController: UIViewController {
+class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var language1Label: UILabel!
     @IBOutlet weak var language2Label: UILabel!
     @IBOutlet weak var language1Btn: UIButton!
@@ -41,7 +41,27 @@ class LanguageSwitchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = UITableViewCell()
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     /*
     // MARK: - Navigation
 

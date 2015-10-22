@@ -42,6 +42,8 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             
             if pop != nil {
                 pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 200, 200)
             }
             
             

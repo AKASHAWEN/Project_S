@@ -30,6 +30,13 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var language1TableView: UITableView!
     @IBOutlet weak var language2TableView: UITableView!
     
+    //initialize DataFetching
+    let languagesList = DataFetching().languagesList()
+    
+    //language setting
+    var language1Setting = String! ()
+    var language2Setting = String! ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +45,9 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         
         self.language2TableView.dataSource = self
         self.language2TableView.delegate = self
+        
+        language1Setting = "English"
+        language2Setting = "English"
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,27 +62,16 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         
         if(tableView == self.language1TableView) {
             
-            return 4
+            return self.languagesList.count
         }
-            
-        else if(tableView == self.language2TableView) {
-            
-            return 4
-        }
-        
         else {
-           return 4
+           return self.languagesList.count
         }
     }
-    
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if(tableView == self.language1TableView) {
-            
-            return 1
-        }
-            
-        else if(tableView == self.language2TableView) {
             
             return 1
         }
@@ -88,24 +87,17 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
             
             let cell1 = tableView.dequeueReusableCellWithIdentifier("language1Cell", forIndexPath: indexPath)
             
-            cell1.textLabel?.text = "cell1 has to be long long long"
+            cell1.textLabel?.text = self.languagesList[indexPath.row]
             return cell1
         }
         
-        else if(tableView == self.language2TableView) {
+        else  {
             
             let cell2 = tableView.dequeueReusableCellWithIdentifier("language2Cell", forIndexPath: indexPath)
             
-            cell2.textLabel?.text = "cell2 has to be long long long"
+            cell2.textLabel?.text = self.languagesList[indexPath.row]
             return cell2
         }
-        
-        else {
-            
-            let cell = UITableViewCell()
-            return cell
-        }
-        
         
     }
     
@@ -115,20 +107,22 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         if(tableView == self.language1TableView) {
             
             let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-            selectedCell.contentView.backgroundColor = UIColor.redColor()
+            selectedCell.contentView.backgroundColor = UIColor.greenColor()
+            
+            //change language setting
+            self.language1Setting = self.languagesList[indexPath.row]
+            print(language1Setting)
         }
             
-        else if(tableView == self.language2TableView) {
+        else {
             
             let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-            selectedCell.contentView.backgroundColor = UIColor.redColor()
+            selectedCell.contentView.backgroundColor = UIColor.blueColor()
+            
+            //change language setting
+            self.language2Setting = self.languagesList[indexPath.row]
+            print(language2Setting)
         }
-
-        
-        
-        
-//        let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
-//        selectedCell.contentView.backgroundColor = UIColor.redColor()
 
     }
     /*

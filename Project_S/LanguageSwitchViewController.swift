@@ -25,6 +25,8 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBAction func languageGoBtn(sender: UIButton) {
         
+        performSegueWithIdentifier("languageSwitchToSettings", sender: self)
+        
     }
     
     @IBOutlet weak var language1TableView: UITableView!
@@ -125,14 +127,18 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         }
 
     }
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let settingVC: SettingsViewController = segue.destinationViewController as! SettingsViewController
+        
+        settingVC.language1Setting = language1Setting
+        settingVC.language2Setting = language2Setting
+        
     }
-    */
+    
 
 }

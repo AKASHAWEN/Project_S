@@ -10,9 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    
+    //take language parameter from LanguageSwitch Controller
+    var language1Setting = String()
+    var language2Setting = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(language1Setting)
+        print(language2Setting)
         // Do any additional setup after loading the view.
     }
 

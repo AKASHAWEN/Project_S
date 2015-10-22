@@ -312,6 +312,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <state key="normal" title="boy"/>
                                 <connections>
+                                    <action selector="test:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="RWg-DK-4iY"/>
                                     <segue destination="SCi-dP-tAj" kind="popoverPresentation" identifier="showBoySetting" popoverAnchorView="FCX-ag-xQO" id="9h4-yJ-hQi">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>

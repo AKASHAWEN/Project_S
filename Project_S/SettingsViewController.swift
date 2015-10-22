@@ -8,13 +8,16 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
 
     
     //take language parameter from LanguageSwitch Controller
     var language1Setting = String()
     var language2Setting = String()
     
+    @IBAction func test(sender: UIButton) {
+        self.performSegueWithIdentifier("showBoySetting", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,14 +32,25 @@ class SettingsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "showBoySetting" {
+            
+            let vc = segue.destinationViewController as! BoySettingCollectionViewController
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+            }
+            
+            
+        }
     }
-    */
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+    
 
 }

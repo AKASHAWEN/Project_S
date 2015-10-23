@@ -8,14 +8,18 @@
 
 import UIKit
 
-class FavouriteViewController: UIViewController {
+class FavouriteViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func BackBtn(sender: UIButton) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tableView.delegate = self
+        self.tableView.dataSource  = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,7 +27,29 @@ class FavouriteViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 5
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FavoriteTableCell
+        
+        cell.favoriteLabel.text = "test"
+        cell.favoriteBtn.setTitle("test", forState: .Normal)
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
     /*
     // MARK: - Navigation
 

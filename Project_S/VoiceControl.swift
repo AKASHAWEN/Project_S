@@ -18,6 +18,7 @@ class VoiceControl {
         let mySpeechUtterance:AVSpeechUtterance = AVSpeechUtterance(string:myString)
         
         mySpeechUtterance.rate = 0.45
+        
         mySpeechSynthesizer .speakUtterance(mySpeechUtterance)
     }
 }

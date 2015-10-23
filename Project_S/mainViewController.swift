@@ -66,6 +66,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.greenColor()
+        
         voice.speakOut(self.results[indexPath.row])
         
     }

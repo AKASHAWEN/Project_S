@@ -86,7 +86,22 @@ class DataLoad {
         
         //check whether it is done
         
-        print("done")
+        print(" data loading, done!")
+    }
+    
+    func favoriteDataLoad(favorite: String){
+        
+        // init an appleDelegate
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //init a context for munipulate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        let newSentence = NSEntityDescription.insertNewObjectForEntityForName("Languages", inManagedObjectContext: context)
+        
+        newSentence.setValue(favorite, forKey: "favorite")
+        print(favorite)
+
+        
     }
     
 }

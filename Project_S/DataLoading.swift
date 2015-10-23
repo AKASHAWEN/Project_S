@@ -21,7 +21,7 @@ class DataLoad {
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
         //create new user object in files
-        let newSentence = NSEntityDescription.insertNewObjectForEntityForName("Languages", inManagedObjectContext: context)
+//        let newSentence = NSEntityDescription.insertNewObjectForEntityForName("Languages", inManagedObjectContext: context)
         
         //create arraies to add all the sentences into it seperately
         var english_general = [String]()
@@ -64,6 +64,8 @@ class DataLoad {
         korean_general.append("야동 좋아해")
         
         for var i=0; i < english_general.count; i++ {
+            
+            let newSentence = NSEntityDescription.insertNewObjectForEntityForName("Languages", inManagedObjectContext: context)
             
             newSentence.setValue(english_general[i], forKey: "english_general")
             print(english_general[i])

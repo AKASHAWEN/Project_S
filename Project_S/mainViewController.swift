@@ -22,6 +22,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var situationSetting = String()
     
+    //initiate fetch functions
+    let results = DataFetching().fetchDataIntoApp()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +46,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return self.results.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = "test cell"
+        cell.textLabel?.text = self.results[indexPath.row]
         
         return cell
     }

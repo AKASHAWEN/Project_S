@@ -21,4 +21,10 @@ class DataFetching{
         
         return list
     }
+    
+    
+    func fetchDataIntoApp(){
+        
+        
+    }
 }

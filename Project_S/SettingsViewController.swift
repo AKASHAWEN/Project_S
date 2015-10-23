@@ -15,6 +15,12 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     var language1Setting = String()
     var language2Setting = String()
     
+    //decalare other settings in the controller
+    var boySetting = String()
+    var girlSetting = String()
+    
+    var situationSetting = String()
+    
     @IBAction func test(sender: UIButton) {
         self.performSegueWithIdentifier("showBoySetting", sender: self)
     }
@@ -43,7 +49,8 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             if pop != nil {
                 pop?.delegate = self
                 //pop?.sourceView = UIButton
-                pop?.sourceRect = CGRectMake(10, 10, 200, 200)
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+                
             }
             
             

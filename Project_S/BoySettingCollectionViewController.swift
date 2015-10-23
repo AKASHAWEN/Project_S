@@ -12,23 +12,27 @@ class BoySettingCollectionViewController: UIViewController, UICollectionViewData
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var imageArray = [UIImage(named: "mario1"), UIImage(named: "mario2"), UIImage(named: "mario3")]
+    
+    var imageLabels = ["mario1","mario2", "mario3"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! BoySettingCollectionViewCell
        
-        cell.imageView.image = UIImage(named: "mario3")
-        cell.imageLabel.text = "mario3"
+        cell.imageView.image = self.imageArray[indexPath.row]
+        cell.imageLabel.text = self.imageLabels[indexPath.row]
         
         return cell
         
@@ -36,20 +40,22 @@ class BoySettingCollectionViewController: UIViewController, UICollectionViewData
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 1
+        return self.imageArray.count
     }
-//    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-//
-//    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! BoySettingCollectionViewCell
+        cell.imageView.image = UIImage(named: "mario2")
+        
+        print("this is index path", (indexPath.row))
+//        let dismissController: UIViewController = self.presentingViewController!
+//        
+//        dismissController.dismissViewControllerAnimated(true) { () -> Void in
+//            print("this dismiss workd")
+//        }
+        
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

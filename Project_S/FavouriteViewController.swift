@@ -10,6 +10,8 @@ import UIKit
 
 class FavouriteViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AVSpeechSynthesizerDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,6 +25,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //initiate fetch functions
     let results = DataFetching().fetchDataIntoApp()
+    
+    //initiate voice functions
+    let voice = VoiceControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +66,22 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.contentView.backgroundColor = UIColor.greenColor()
+        voice.speakOut(self.results[indexPath.row])
+        
     }
 
+    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
+        
+        print("done speaking")
+        
+    }
+    
+    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didStartSpeechUtterance utterance: AVSpeechUtterance) {
+        
+        print("starting speech")
+        
+        
+    }
     /*
     // MARK: - Navigation
 

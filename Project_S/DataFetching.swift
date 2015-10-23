@@ -50,10 +50,39 @@ class DataFetching{
             }
         }
         
-        
         return lists
         //for furture filter use
 //        //init nspredicate to filter
 //        request.predicate = NSPredicate(format: " == %@", "")
     }
+    
+    func fetchFavorite() -> [String] {
+        
+        
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //init a context for munipulate
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+        
+        //init request
+        let request = NSFetchRequest(entityName: "Languages")
+        request.returnsObjectsAsFaults = false
+        
+        //create a variable to hold results
+        let results = try! context.executeFetchRequest(request)
+        
+        var lists = [String]()
+        
+        if results.count > 0 {
+            
+            for result: AnyObject in results {
+                
+                if let item = result.valueForKey("favorite") as? String {
+                    lists.append(item)
+                }
+            }
+        }
+        
+        return lists
+    }
+    
 }

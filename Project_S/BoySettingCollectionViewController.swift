@@ -14,7 +14,7 @@ class BoySettingCollectionViewController: UIViewController, UICollectionViewData
     
     var imageArray = [UIImage(named: "mario1"), UIImage(named: "mario2"), UIImage(named: "mario3")]
     
-    var imageLabels = ["mario1","mario2", "mario3"]
+    var imageLabels = ["default","default", "default"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

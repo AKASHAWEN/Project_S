@@ -16,13 +16,25 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     var language2Setting = String()
     
     //decalare other settings in the controller
-    var boySetting = String()
-    var girlSetting = String()
+    var boySetting = [String]()
+    var girlSetting = [String]()
     
     var situationSetting = String()
     
-    @IBAction func test(sender: UIButton) {
+    
+    
+    @IBAction func boySettingBtn(sender: UIButton) {
+        self.boySetting.append("boy1")
+        self.boySetting.append("boy2")
+        self.boySetting.append("boy3")
         self.performSegueWithIdentifier("showBoySetting", sender: self)
+    }
+    
+    @IBAction func girlSettingBtn(sender: UIButton) {
+        self.girlSetting.append("girl1")
+        self.girlSetting.append("girl2")
+        self.girlSetting.append("girl3")
+        self.performSegueWithIdentifier("showGirlSetting", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +56,26 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
         if segue.identifier == "showBoySetting" {
             
             let vc = segue.destinationViewController as! BoySettingCollectionViewController
+            //transfer parameters into new viewcontroller
+            vc.imageLabels = self.boySetting
             let pop = vc.popoverPresentationController
             
             if pop != nil {
                 pop?.delegate = self
                 //pop?.sourceView = UIButton
                 pop?.sourceRect = CGRectMake(10, 10, 10, 10)
-                
             }
+        } else if segue.identifier == "showGirlSetting" {
             
+            let vc = segue.destinationViewController as! BoySettingCollectionViewController
+            vc.imageLabels = self.girlSetting
+            let pop = vc.popoverPresentationController
             
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
         }
     }
     

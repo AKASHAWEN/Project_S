@@ -55,6 +55,12 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     func test(sender: UIButton){
         
         print(sender.tag)
+        if sender.titleLabel?.text == "unpressed" {
+            sender.setTitle("pressed", forState: UIControlState.Normal)
+        } else {
+            sender.setTitle("unpressed", forState: UIControlState.Normal)
+        }
+        
     }
     /*
     // MARK: - Navigation

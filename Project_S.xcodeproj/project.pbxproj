@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D3E48801BDFD4E800809A4D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */; };
+		0D3E48A41BE01E6200809A4D /* ConfigParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E48A31BE01E6200809A4D /* ConfigParam.swift */; };
 		0D5996F71BD9801000A4F5FB /* BoySettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */; };
 		0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */; };
 		0D5996FB1BDAC27F00A4F5FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		0D3E48A31BE01E6200809A4D /* ConfigParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigParam.swift; sourceTree = "<group>"; };
 		0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewController.swift; sourceTree = "<group>"; };
 		0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -134,6 +136,7 @@
 				0D65DBA61BD8181D00BF6102 /* DataLoading.swift */,
 				0D65DBAA1BD9329700BF6102 /* DataFetching.swift */,
 				0D5997001BDAC88E00A4F5FB /* VoiceControl.swift */,
+				0D3E48A31BE01E6200809A4D /* ConfigParam.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */,
 				0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */,
 				0D65DBA71BD8181D00BF6102 /* DataLoading.swift in Sources */,
+				0D3E48A41BE01E6200809A4D /* ConfigParam.swift in Sources */,
 				0D3E48801BDFD4E800809A4D /* FavoriteTableViewCell.swift in Sources */,
 				0D65DBAB1BD9329700BF6102 /* DataFetching.swift in Sources */,
 				0D5997011BDAC88E00A4F5FB /* VoiceControl.swift in Sources */,

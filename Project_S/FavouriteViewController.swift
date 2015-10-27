@@ -18,8 +18,7 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.delegate = self
-        self.tableView.dataSource  = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,16 +38,23 @@ class FavouriteViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! FavoriteTableCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell1", forIndexPath: indexPath) as! FavoriteTableViewCell   
         
         cell.favoriteLabel.text = "test"
-        cell.favoriteBtn.setTitle("test", forState: .Normal)
+        cell.favoriteBtn.tag = indexPath.row
+        cell.favoriteBtn.addTarget(self, action: "test:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    func test(sender: UIButton){
+        
+        print(sender.tag)
     }
     /*
     // MARK: - Navigation

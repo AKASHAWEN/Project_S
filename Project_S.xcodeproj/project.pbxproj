@@ -7,38 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D5996F71BD9801000A4F5FB /* BoySettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		0D3E48801BDFD4E800809A4D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */; };
+		0D5996F71BD9801000A4F5FB /* BoySettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */; };
+		0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */; };
 		0D5996FB1BDAC27F00A4F5FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */; };
-		0D5997011BDAC88E00A4F5FB /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5997001BDAC88E00A4F5FB /* VoiceControl.swift */; settings = {ASSET_TAGS = (); }; };
-		0D5997031BDADC7600A4F5FB /* FavoriteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5997021BDADC7600A4F5FB /* FavoriteTableCell.swift */; settings = {ASSET_TAGS = (); }; };
+		0D5997011BDAC88E00A4F5FB /* VoiceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5997001BDAC88E00A4F5FB /* VoiceControl.swift */; };
 		0D65DB571BD6B80800BF6102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB561BD6B80800BF6102 /* AppDelegate.swift */; };
 		0D65DB591BD6B80800BF6102 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB581BD6B80800BF6102 /* ConfirmViewController.swift */; };
 		0D65DB5C1BD6B80800BF6102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB5A1BD6B80800BF6102 /* Main.storyboard */; };
 		0D65DB5F1BD6B80800BF6102 /* Project_S.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB5D1BD6B80800BF6102 /* Project_S.xcdatamodeld */; };
 		0D65DB611BD6B80800BF6102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB601BD6B80800BF6102 /* Assets.xcassets */; };
 		0D65DB641BD6B80800BF6102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB621BD6B80800BF6102 /* LaunchScreen.storyboard */; };
-		0D65DB6C1BD6C63700BF6102 /* mario1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB6B1BD6C63700BF6102 /* mario1.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB721BD6CCCA00BF6102 /* mario2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB6F1BD6CCCA00BF6102 /* mario2.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB731BD6CCCA00BF6102 /* mario3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB701BD6CCCA00BF6102 /* mario3.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB741BD6CCCA00BF6102 /* mario4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB711BD6CCCA00BF6102 /* mario4.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB771BD6CD7A00BF6102 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB751BD6CD7A00BF6102 /* blue.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB781BD6CD7A00BF6102 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB761BD6CD7A00BF6102 /* green.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB7A1BD6CDF000BF6102 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB791BD6CDF000BF6102 /* red.png */; settings = {ASSET_TAGS = (); }; };
-		0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0D65DB801BD6DDEF00BF6102 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0D65DB821BD6EB9100BF6102 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0D65DBA71BD8181D00BF6102 /* DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DBA61BD8181D00BF6102 /* DataLoading.swift */; settings = {ASSET_TAGS = (); }; };
-		0D65DBAB1BD9329700BF6102 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DBAA1BD9329700BF6102 /* DataFetching.swift */; settings = {ASSET_TAGS = (); }; };
+		0D65DB6C1BD6C63700BF6102 /* mario1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB6B1BD6C63700BF6102 /* mario1.png */; };
+		0D65DB721BD6CCCA00BF6102 /* mario2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB6F1BD6CCCA00BF6102 /* mario2.png */; };
+		0D65DB731BD6CCCA00BF6102 /* mario3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB701BD6CCCA00BF6102 /* mario3.png */; };
+		0D65DB741BD6CCCA00BF6102 /* mario4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB711BD6CCCA00BF6102 /* mario4.png */; };
+		0D65DB771BD6CD7A00BF6102 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB751BD6CD7A00BF6102 /* blue.png */; };
+		0D65DB781BD6CD7A00BF6102 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB761BD6CD7A00BF6102 /* green.png */; };
+		0D65DB7A1BD6CDF000BF6102 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D65DB791BD6CDF000BF6102 /* red.png */; };
+		0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7B1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift */; };
+		0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */; };
+		0D65DB801BD6DDEF00BF6102 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */; };
+		0D65DB821BD6EB9100BF6102 /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */; };
+		0D65DBA71BD8181D00BF6102 /* DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DBA61BD8181D00BF6102 /* DataLoading.swift */; };
+		0D65DBAB1BD9329700BF6102 /* DataFetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D65DBAA1BD9329700BF6102 /* DataFetching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewController.swift; sourceTree = "<group>"; };
 		0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0D5997001BDAC88E00A4F5FB /* VoiceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceControl.swift; sourceTree = "<group>"; };
-		0D5997021BDADC7600A4F5FB /* FavoriteTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableCell.swift; sourceTree = "<group>"; };
 		0D65DB531BD6B80800BF6102 /* Project_S.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project_S.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D65DB561BD6B80800BF6102 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D65DB581BD6B80800BF6102 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 				0D65DB7D1BD6D86600BF6102 /* SettingsViewController.swift */,
 				0D65DB7F1BD6DDEF00BF6102 /* mainViewController.swift */,
 				0D65DB811BD6EB9100BF6102 /* FavouriteViewController.swift */,
+				0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */,
 				0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */,
 				0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */,
-				0D5997021BDADC7600A4F5FB /* FavoriteTableCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -222,12 +222,12 @@
 				0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */,
 				0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */,
 				0D65DBA71BD8181D00BF6102 /* DataLoading.swift in Sources */,
+				0D3E48801BDFD4E800809A4D /* FavoriteTableViewCell.swift in Sources */,
 				0D65DBAB1BD9329700BF6102 /* DataFetching.swift in Sources */,
 				0D5997011BDAC88E00A4F5FB /* VoiceControl.swift in Sources */,
 				0D65DB821BD6EB9100BF6102 /* FavouriteViewController.swift in Sources */,
 				0D65DB571BD6B80800BF6102 /* AppDelegate.swift in Sources */,
 				0D65DB801BD6DDEF00BF6102 /* mainViewController.swift in Sources */,
-				0D5997031BDADC7600A4F5FB /* FavoriteTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

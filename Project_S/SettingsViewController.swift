@@ -34,6 +34,16 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
         self.performSegueWithIdentifier("showGirlSetting", sender: self)
     }
     
+    @IBAction func situationSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("showSituationSetting", sender: self)
+    }
+    
+    @IBAction func withSettingBtn(sender: UIButton) {
+    }
+    
+    @IBAction func randomSettingBtn(sender: UIButton) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,6 +78,18 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             let vc = segue.destinationViewController as! BoySettingCollectionViewController
             //transfer parameters into new viewcontroller
             vc.imageLabels = self.configParams.returnGirlSetting()
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
+        } else if segue.identifier == "showSituationSetting" {
+            
+            let vc = segue.destinationViewController as! BoySettingCollectionViewController
+            //transfer parameters into new viewcontroller
+            vc.imageLabels = self.configParams.returnSituationSetting()
             let pop = vc.popoverPresentationController
             
             if pop != nil {

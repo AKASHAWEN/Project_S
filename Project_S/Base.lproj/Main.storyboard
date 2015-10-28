@@ -231,11 +231,11 @@
                         <viewControllerLayoutGuide type="bottom" id="e3i-Et-gfO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xBR-vD-LKp">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0fH-Ee-Czp">
-                                <rect key="frame" x="0.0" y="15" width="350" height="185"/>
+                                <rect key="frame" x="0.0" y="15" width="350" height="335"/>
                                 <animations/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XLh-sG-Rt5">
                                     <size key="itemSize" width="150" height="150"/>
@@ -282,9 +282,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="350" height="200"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="350" height="350"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="350" height="200"/>
+                    <size key="freeformSize" width="350" height="350"/>
                     <connections>
                         <outlet property="collectionView" destination="0fH-Ee-Czp" id="nn9-1a-RYI"/>
                     </connections>
@@ -347,6 +347,12 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="situation"/>
+                                <connections>
+                                    <action selector="situationSettingBtn:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="Rbl-S6-7fh"/>
+                                    <segue destination="SCi-dP-tAj" kind="popoverPresentation" identifier="showSituationSetting" popoverAnchorView="Z1N-Vy-gf0" id="yJ6-fv-yEt">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS4-YH-Yrg">
                                 <rect key="frame" x="20" y="489" width="280" height="46"/>
@@ -358,6 +364,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="go"/>
                                 <connections>
+                                    <action selector="withSettingBtn:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="Yeq-qD-T7I"/>
                                     <segue destination="BOS-9k-zv5" kind="show" identifier="withSettingToMain" id="Nx6-aY-kjD"/>
                                 </connections>
                             </button>
@@ -371,6 +378,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="random"/>
                                 <connections>
+                                    <action selector="randomSettingBtn:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="f9T-eY-DaX"/>
                                     <segue destination="BOS-9k-zv5" kind="show" identifier="randomSettingToMain" id="Zlb-QO-fEb"/>
                                 </connections>
                             </button>
@@ -403,6 +411,50 @@
             </objects>
             <point key="canvasLocation" x="1803" y="400"/>
         </scene>
+        <!--Main Setting Table View Controller-->
+        <scene sceneID="Q3X-Yk-YVb">
+            <objects>
+                <viewController id="0aY-G8-ZT2" customClass="MainSettingTableViewController" customModule="Project_S" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tpm-4d-7j3"/>
+                        <viewControllerLayoutGuide type="bottom" id="QJ8-26-2Bl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rl8-wg-d63">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbh-sy-BsH">
+                                <rect key="frame" x="0.0" y="20" width="300" height="180"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" id="Lr8-mP-Edy">
+                                        <rect key="frame" x="0.0" y="28" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lr8-mP-Edy" id="VOi-PJ-lOw">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="200"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="200"/>
+                    <connections>
+                        <outlet property="tableview" destination="bbh-sy-BsH" id="Zyw-Jr-bTG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wO9-Ij-Ufu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2652" y="-457"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="oXP-91-GQj">
             <objects>
@@ -423,6 +475,11 @@
                                     <constraint firstAttribute="width" constant="80" id="OPL-ne-qYG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainLanguagesSetting" popoverAnchorView="vLe-2p-kiS" id="C0Z-cz-o0X">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9d-f0-ZJ4">
                                 <rect key="frame" x="166" y="20" width="130" height="200"/>
@@ -432,6 +489,11 @@
                                     <constraint firstAttribute="width" constant="80" id="VIe-mn-bBR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainBoySetting" popoverAnchorView="y9d-f0-ZJ4" id="EeO-Hs-lAp">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLS-eY-UcV">
                                 <rect key="frame" x="304" y="20" width="130" height="200"/>
@@ -441,6 +503,11 @@
                                     <constraint firstAttribute="width" constant="80" id="G8G-9u-xqf"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainGirlSetting" popoverAnchorView="yLS-eY-UcV" id="aQg-cY-oEp">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZS-Qb-FwE">
                                 <rect key="frame" x="442" y="20" width="130" height="200"/>
@@ -452,6 +519,11 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainSituationSetting" popoverAnchorView="KZS-Qb-FwE" id="5yJ-8C-sWx">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ce-Pb-7LZ">
                                 <rect key="frame" x="149" y="240" width="303" height="302"/>
@@ -660,7 +732,8 @@
         <image name="mario1.png" width="1105" height="1501"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iMd-Lm-Jnr"/>
-        <segue reference="Zlb-QO-fEb"/>
+        <segue reference="Nx6-aY-kjD"/>
+        <segue reference="yJ6-fv-yEt"/>
+        <segue reference="aQg-cY-oEp"/>
     </inferredMetricsTieBreakers>
 </document>

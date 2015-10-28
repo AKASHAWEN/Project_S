@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AVSpeechSynthesizerDelegate {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AVSpeechSynthesizerDelegate, UIPopoverPresentationControllerDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -83,14 +83,64 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        
+        if segue.identifier == "mainLanguagesSetting" {
+            
+            let vc = segue.destinationViewController as! MainSettingTableViewController
+            
+            
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
+        } else if segue.identifier == "mainBoySetting" {
+            
+            let vc = segue.destinationViewController as! MainSettingTableViewController
+            
+            
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
+        } else if segue.identifier == "mainGirlSetting" {
+            
+            let vc = segue.destinationViewController as! MainSettingTableViewController
+            
+            
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
+        } else if segue.identifier == "mainSituationSetting" {
+            
+            let vc = segue.destinationViewController as! MainSettingTableViewController
+            
+            
+            let pop = vc.popoverPresentationController
+            
+            if pop != nil {
+                pop?.delegate = self
+                //pop?.sourceView = UIButton
+                pop?.sourceRect = CGRectMake(10, 10, 10, 10)
+            }
+        }
+        
     }
-    */
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
 
 }

@@ -12,6 +12,7 @@ class ConfigParam {
     
     var boySetting = [String]()
     var girlSetting = [String]()
+    var situationSetting = [String]()
     
     init(){
         
@@ -23,6 +24,10 @@ class ConfigParam {
         self.girlSetting.append("girl2")
         self.girlSetting.append("girl3")
         
+        self.situationSetting.append("situation1")
+        self.situationSetting.append("situation2")
+        self.situationSetting.append("situation3")
+        
     }
     
     func returnBoySetting() -> [String] {
@@ -31,5 +36,9 @@ class ConfigParam {
     
     func returnGirlSetting() -> [String] {
         return self.girlSetting
+    }
+    
+    func returnSituationSetting() -> [String] {
+        return self.situationSetting
     }
 }

@@ -40,16 +40,25 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     @IBAction func withSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("withSettingToMain", sender: self)
     }
     
     @IBAction func randomSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("randomSettingToMain", sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print(language1Setting)
         print(language2Setting)
-        // Do any additional setup after loading the view.
+       
+        //init boy, girl and situation default setting after viewdid loaded
+        self.boySetting = self.configParams.returnBoySetting()[0]
+        self.girlSetting = self.configParams.returnGirlSetting()[0]
+        self.situationSetting = self.configParams.returnSituationSetting()[0]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,7 +106,28 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
                 //pop?.sourceView = UIButton
                 pop?.sourceRect = CGRectMake(10, 10, 10, 10)
             }
+        } else if segue.identifier == "withSettingToMain" {
+            
+            let vc = segue.destinationViewController as! MainViewController
+            //pass parameters
+            vc.language1Setting = self.language1Setting
+            vc.language2Setting = self.language2Setting
+            vc.boySetting = self.boySetting
+            vc.girlSetting = self.girlSetting
+            vc.situationSetting = self.situationSetting
+            
+        } else if segue.identifier == "randomSettingToMain" {
+            
+            let vc = segue.destinationViewController as! MainViewController
+            //pass parameters
+            vc.language1Setting = self.language1Setting
+            vc.language2Setting = self.language2Setting
+            vc.boySetting = self.boySetting
+            vc.girlSetting = self.girlSetting
+            vc.situationSetting = self.situationSetting
+            
         }
+        
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {

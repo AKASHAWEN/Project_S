@@ -24,6 +24,12 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     //create an instance to get all the configureation parameters
     let configParams = ConfigParam()
     
+    @IBAction func testBtn(sender: UIButton) {
+        print(boySetting)
+        print(girlSetting)
+        print(situationSetting)
+        
+    }
     @IBAction func boySettingBtn(sender: UIButton) {
         
         self.performSegueWithIdentifier("showBoySetting", sender: self)
@@ -75,6 +81,7 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             let vc = segue.destinationViewController as! BoySettingCollectionViewController
             //transfer parameters into new viewcontroller
             vc.imageLabels = self.configParams.returnBoySetting()
+            vc.source = "showBoySetting"
             let pop = vc.popoverPresentationController
             
             if pop != nil {
@@ -87,6 +94,7 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             let vc = segue.destinationViewController as! BoySettingCollectionViewController
             //transfer parameters into new viewcontroller
             vc.imageLabels = self.configParams.returnGirlSetting()
+            vc.source = "showGirlSetting"
             let pop = vc.popoverPresentationController
             
             if pop != nil {
@@ -99,6 +107,7 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             let vc = segue.destinationViewController as! BoySettingCollectionViewController
             //transfer parameters into new viewcontroller
             vc.imageLabels = self.configParams.returnSituationSetting()
+            vc.source = "showSituationSetting"
             let pop = vc.popoverPresentationController
             
             if pop != nil {
@@ -122,9 +131,17 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
             //pass parameters
             vc.language1Setting = self.language1Setting
             vc.language2Setting = self.language2Setting
-            vc.boySetting = self.boySetting
-            vc.girlSetting = self.girlSetting
-            vc.situationSetting = self.situationSetting
+            
+            var random = UInt32()
+            
+            random = arc4random_uniform(UInt32(self.configParams.returnBoySetting().count))
+            vc.boySetting = self.configParams.returnBoySetting()[Int(random)]
+            
+            random = arc4random_uniform(UInt32(self.configParams.returnGirlSetting().count))
+            vc.girlSetting = self.configParams.returnGirlSetting()[Int(random)]
+            
+            random = arc4random_uniform(UInt32(self.configParams.returnSituationSetting().count))
+            vc.situationSetting = self.configParams.returnSituationSetting()[Int(random)]
             
         }
         
@@ -134,5 +151,34 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
         return .None
     }
     
+    //config all the unwind segue
+    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+        if(unwindSegue.identifier != nil) {
+            
+            if unwindSegue.identifier == "backFromBoySettingController" {
+               
+                let svc = unwindSegue.sourceViewController as! BoySettingCollectionViewController
+                
+                if svc.source == "showBoySetting" {
+                    
+                    self.boySetting = svc.result
+                    
+                } else if svc.source == "showGirlSetting" {
+                    
+                    self.girlSetting = svc.result
+                    
+                } else if svc.source == "showSituationSetting" {
+                    
+                    self.situationSetting = svc.result
+                }
+                
+                
+            }
+            
+        }
+    }
 
+    
+    
 }

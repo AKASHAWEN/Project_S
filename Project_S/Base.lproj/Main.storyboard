@@ -270,6 +270,7 @@
                                         <connections>
                                             <outlet property="imageLabel" destination="X6Q-iZ-CcZ" id="T2z-wG-YZJ"/>
                                             <outlet property="imageView" destination="nZz-Kv-2o4" id="rBM-Ru-dOv"/>
+                                            <segue destination="vVX-VE-YQo" kind="unwind" identifier="backFromBoySettingController" unwindAction="unwindForSegue:towardsViewController:" id="Bql-Oe-DRh"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -290,6 +291,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTu-oe-8Fl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vVX-VE-YQo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1458" y="-356"/>
         </scene>
@@ -380,6 +382,14 @@
                                 <connections>
                                     <action selector="randomSettingBtn:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="f9T-eY-DaX"/>
                                     <segue destination="BOS-9k-zv5" kind="show" identifier="randomSettingToMain" id="Zlb-QO-fEb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJA-BL-IIy">
+                                <rect key="frame" x="20" y="459" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testBtn:" destination="2HY-lk-ZiJ" eventType="touchUpInside" id="PHq-lC-P7v"/>
                                 </connections>
                             </button>
                         </subviews>

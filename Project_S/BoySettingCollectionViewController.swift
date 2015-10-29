@@ -15,6 +15,9 @@ class BoySettingCollectionViewController: UIViewController, UICollectionViewData
     var imageArray = [UIImage(named: "mario1"), UIImage(named: "mario2"), UIImage(named: "mario3")]
     
     var imageLabels = ["default","default", "default"]
+    // declare a source para for unwind segue    
+    var source = String()
+    var result = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,11 +52,11 @@ class BoySettingCollectionViewController: UIViewController, UICollectionViewData
         cell.imageView.image = UIImage(named: "mario2")
         
         print("this is index path", (indexPath.row))
-//        let dismissController: UIViewController = self.presentingViewController!
-//        
-//        dismissController.dismissViewControllerAnimated(true) { () -> Void in
-//            print("this dismiss workd")
-//        }
+        self.result = self.imageLabels[indexPath.row]
+            
+        self.performSegueWithIdentifier("backFromBoySettingController", sender: self)
+            
+       
         
 
     }

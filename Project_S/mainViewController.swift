@@ -35,6 +35,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
+        print(boySetting)
+        print(girlSetting)
+        print(situationSetting)
     }
 
     override func didReceiveMemoryWarning() {

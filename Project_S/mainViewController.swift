@@ -50,6 +50,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //initiate voice functions
     let voice = VoiceControl()
     
+    
+    //initiate Configuration parameters
+    let configParam = ConfigParam()
+    
+    
+    //initiate languages list
+    let dataFetching = DataFetching()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,7 +120,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "mainLanguagesSetting" {
             
             let vc = segue.destinationViewController as! MainSettingTableViewController
-            
+            vc.lists = self.dataFetching.languagesList()
             
             let pop = vc.popoverPresentationController
             
@@ -124,7 +132,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else if segue.identifier == "mainBoySetting" {
             
             let vc = segue.destinationViewController as! MainSettingTableViewController
-            
+            vc.lists = self.configParam.boySetting
             
             let pop = vc.popoverPresentationController
             
@@ -136,7 +144,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else if segue.identifier == "mainGirlSetting" {
             
             let vc = segue.destinationViewController as! MainSettingTableViewController
-            
+            vc.lists = self.configParam.girlSetting
             
             let pop = vc.popoverPresentationController
             
@@ -148,7 +156,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else if segue.identifier == "mainSituationSetting" {
             
             let vc = segue.destinationViewController as! MainSettingTableViewController
-            
+            vc.lists = self.configParam.situationSetting
             
             let pop = vc.popoverPresentationController
             

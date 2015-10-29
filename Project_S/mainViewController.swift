@@ -13,6 +13,27 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var languageSettingBtn: UIButton!
+    @IBOutlet weak var boySettingBtn: UIButton!
+    @IBOutlet weak var girlSettingBtn: UIButton!
+    @IBOutlet weak var situationSettingBtn: UIButton!
+    
+    @IBAction func languageSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("mainLanguagesSetting", sender: self)
+    }
+    @IBAction func boySettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("mainBoySetting", sender: self)
+    }
+    @IBAction func girlSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("mainGirlSetting", sender: self)
+    }
+    @IBAction func situationSettingBtn(sender: UIButton) {
+        
+        self.performSegueWithIdentifier("mainSituationSetting", sender: self)
+    }
     
     //declare all the settings, and get the realvalue from segue
     var language1Setting = String()
@@ -35,9 +56,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        print(boySetting)
-        print(girlSetting)
-        print(situationSetting)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,7 +77,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell3", forIndexPath: indexPath)
         
         cell.textLabel?.text = self.results[indexPath.row]
         

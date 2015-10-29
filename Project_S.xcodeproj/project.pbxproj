@@ -10,6 +10,7 @@
 		0D3E48801BDFD4E800809A4D /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */; };
 		0D3E48A41BE01E6200809A4D /* ConfigParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E48A31BE01E6200809A4D /* ConfigParam.swift */; };
 		0D3E48A61BE02B0600809A4D /* MainSettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E48A51BE02B0600809A4D /* MainSettingTableViewController.swift */; };
+		0D3E48AC1BE2A26800809A4D /* mainViewControllerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E48AB1BE2A26800809A4D /* mainViewControllerViewCell.swift */; };
 		0D5996F71BD9801000A4F5FB /* BoySettingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */; };
 		0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */; };
 		0D5996FB1BDAC27F00A4F5FB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */; };
@@ -39,6 +40,7 @@
 		0D3E487F1BDFD4E800809A4D /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		0D3E48A31BE01E6200809A4D /* ConfigParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigParam.swift; sourceTree = "<group>"; };
 		0D3E48A51BE02B0600809A4D /* MainSettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSettingTableViewController.swift; sourceTree = "<group>"; };
+		0D3E48AB1BE2A26800809A4D /* mainViewControllerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewControllerViewCell.swift; sourceTree = "<group>"; };
 		0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewController.swift; sourceTree = "<group>"; };
 		0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoySettingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0D5996FA1BDAC27F00A4F5FB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 				0D5996F61BD9801000A4F5FB /* BoySettingCollectionViewController.swift */,
 				0D5996F81BD9807000A4F5FB /* BoySettingCollectionViewCell.swift */,
 				0D3E48A51BE02B0600809A4D /* MainSettingTableViewController.swift */,
+				0D3E48AB1BE2A26800809A4D /* mainViewControllerViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				0D65DB591BD6B80800BF6102 /* ConfirmViewController.swift in Sources */,
 				0D5996F71BD9801000A4F5FB /* BoySettingCollectionViewController.swift in Sources */,
 				0D65DB7C1BD6CE6F00BF6102 /* LanguageSwitchViewController.swift in Sources */,
+				0D3E48AC1BE2A26800809A4D /* mainViewControllerViewCell.swift in Sources */,
 				0D5996F91BD9807000A4F5FB /* BoySettingCollectionViewCell.swift in Sources */,
 				0D65DB7E1BD6D86600BF6102 /* SettingsViewController.swift in Sources */,
 				0D65DBA71BD8181D00BF6102 /* DataLoading.swift in Sources */,

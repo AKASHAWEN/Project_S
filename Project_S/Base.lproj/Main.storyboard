@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2HY-lk-ZiJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -486,6 +486,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="languageSettingBtn:" destination="BOS-9k-zv5" eventType="touchUpInside" id="gg6-82-qOJ"/>
                                     <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainLanguagesSetting" popoverAnchorView="vLe-2p-kiS" id="C0Z-cz-o0X">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -500,6 +501,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="boySettingBtn:" destination="BOS-9k-zv5" eventType="touchUpInside" id="Qoi-Gh-AJU"/>
                                     <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainBoySetting" popoverAnchorView="y9d-f0-ZJ4" id="EeO-Hs-lAp">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -514,6 +516,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="girlSettingBtn:" destination="BOS-9k-zv5" eventType="touchUpInside" id="Iso-zy-Srz"/>
                                     <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainGirlSetting" popoverAnchorView="yLS-eY-UcV" id="aQg-cY-oEp">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -530,6 +533,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="situationSettingBtn:" destination="BOS-9k-zv5" eventType="touchUpInside" id="FJz-WN-vc0"/>
                                     <segue destination="0aY-G8-ZT2" kind="popoverPresentation" identifier="mainSituationSetting" popoverAnchorView="KZS-Qb-FwE" id="5yJ-8C-sWx">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
@@ -540,15 +544,46 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="INi-v7-zdY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell3" id="INi-v7-zdY" customClass="mainViewControllerViewCell" customModule="Project_S" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="303" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="INi-v7-zdY" id="qs7-G2-n0J">
                                             <rect key="frame" x="0.0" y="0.0" width="303" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST9-a7-SFw">
+                                                    <rect key="frame" x="249" y="10" width="46" height="30"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="Gh5-JR-vOS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="like"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fry-Nz-Hmr">
+                                                    <rect key="frame" x="8" y="14" width="225" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="ST9-a7-SFw" firstAttribute="trailing" secondItem="qs7-G2-n0J" secondAttribute="trailingMargin" id="1gO-Me-OP3"/>
+                                                <constraint firstItem="Fry-Nz-Hmr" firstAttribute="leading" secondItem="qs7-G2-n0J" secondAttribute="leadingMargin" id="GDf-hw-y1F"/>
+                                                <constraint firstItem="ST9-a7-SFw" firstAttribute="top" secondItem="qs7-G2-n0J" secondAttribute="topMargin" constant="2" id="OqH-MS-IxI"/>
+                                                <constraint firstItem="Fry-Nz-Hmr" firstAttribute="centerY" secondItem="ST9-a7-SFw" secondAttribute="centerY" id="ToK-pz-0Nw"/>
+                                                <constraint firstItem="Fry-Nz-Hmr" firstAttribute="top" secondItem="qs7-G2-n0J" secondAttribute="topMargin" constant="6" id="UdS-on-GBY"/>
+                                                <constraint firstItem="Fry-Nz-Hmr" firstAttribute="bottom" secondItem="qs7-G2-n0J" secondAttribute="bottomMargin" id="iuV-qe-cbK"/>
+                                                <constraint firstItem="ST9-a7-SFw" firstAttribute="leading" secondItem="Fry-Nz-Hmr" secondAttribute="trailing" constant="16" id="nIQ-pD-f0H"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="likeBtn" destination="ST9-a7-SFw" id="ZyB-Lc-K3L"/>
+                                            <outlet property="sentence" destination="Fry-Nz-Hmr" id="0DK-Bc-LmG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -601,6 +636,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="boySettingBtn" destination="y9d-f0-ZJ4" id="BXM-VO-NEs"/>
+                        <outlet property="girlSettingBtn" destination="yLS-eY-UcV" id="V3w-nB-EKA"/>
+                        <outlet property="languageSettingBtn" destination="vLe-2p-kiS" id="mNE-3H-Tfb"/>
+                        <outlet property="situationSettingBtn" destination="KZS-Qb-FwE" id="YsZ-HN-aGr"/>
                         <outlet property="tableView" destination="0Ce-Pb-7LZ" id="4pZ-ic-fTb"/>
                     </connections>
                 </viewController>
@@ -742,8 +781,8 @@
         <image name="mario1.png" width="1105" height="1501"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zlb-QO-fEb"/>
         <segue reference="yJ6-fv-yEt"/>
         <segue reference="aQg-cY-oEp"/>
+        <segue reference="WT0-cD-365"/>
     </inferredMetricsTieBreakers>
 </document>

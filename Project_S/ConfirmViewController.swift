@@ -11,7 +11,7 @@ import UIKit
 class ConfirmViewController: UIViewController {
 
     override func viewDidLoad() {
-        //first load check
+        //check whether is this the first time user open the app
         let notFirstLaunch = NSUserDefaults.standardUserDefaults().boolForKey("FirstLaunch")
         if notFirstLaunch  {
             print("Not first launch.")

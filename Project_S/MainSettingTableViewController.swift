@@ -56,6 +56,11 @@ class MainSettingTableViewController: UIViewController, UITableViewDelegate, UIT
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("backFromMainSettingTableViewController", sender: self)
+    }
+    
 
 
 

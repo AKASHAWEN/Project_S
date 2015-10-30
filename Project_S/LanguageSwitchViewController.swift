@@ -9,12 +9,14 @@
 import UIKit
 
 class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    //declare all the UI components
     @IBOutlet weak var language1Label: UILabel!
     @IBOutlet weak var language2Label: UILabel!
     @IBOutlet weak var language1Btn: UIButton!
     @IBOutlet weak var language2Btn: UIButton!
     @IBOutlet weak var languageGoBtn: UIButton!
-
+    
+    //used to hide language select tableview
     @IBAction func language1Btn(sender: UIButton) {
         
     }
@@ -23,6 +25,7 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         
     }
     
+    //used to trigger segue for settingViewController
     @IBAction func languageGoBtn(sender: UIButton) {
         
         performSegueWithIdentifier("languageSwitchToSettings", sender: self)
@@ -48,6 +51,7 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
         self.language2TableView.dataSource = self
         self.language2TableView.delegate = self
         
+        //give language setting parameters default settings
         language1Setting = "English"
         language2Setting = "English"
     }
@@ -85,6 +89,7 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        //different setting of two tables
         if(tableView == self.language1TableView) {
             
             let cell1 = tableView.dequeueReusableCellWithIdentifier("language1Cell", forIndexPath: indexPath)
@@ -104,6 +109,7 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     //select cell change background and change setting for next segue
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if(tableView == self.language1TableView) {
@@ -130,7 +136,7 @@ class LanguageSwitchViewController: UIViewController, UITableViewDelegate, UITab
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //pass the language setting parameters to next settingViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let settingVC: SettingsViewController = segue.destinationViewController as! SettingsViewController

@@ -85,9 +85,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell3", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell3", forIndexPath: indexPath) as! mainViewControllerViewCell
         
-        cell.textLabel?.text = self.results[indexPath.row]
+        cell.sentence.text = self.results[indexPath.row]
         
         return cell
     }
@@ -171,6 +171,34 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
         return .None
+    }
+    
+    
+    override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        
+        if(unwindSegue.identifier != nil) {
+            
+            if unwindSegue.identifier == "backFromMainSettingTableViewController" {
+                
+//                let svc = unwindSegue.sourceViewController as! MainSettingTableViewController
+                
+//                if svc.source == "showBoySetting" {
+//                    
+//                    self.boySetting = svc.result
+//                    
+//                } else if svc.source == "showGirlSetting" {
+//                    
+//                    self.girlSetting = svc.result
+//                    
+//                } else if svc.source == "showSituationSetting" {
+//                    
+//                    self.situationSetting = svc.result
+//                }
+                    print("success")
+                
+            }
+            
+        }
     }
 
 }

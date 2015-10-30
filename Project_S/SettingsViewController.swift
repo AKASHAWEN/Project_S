@@ -24,12 +24,7 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     //create an instance to get all the configureation parameters
     let configParams = ConfigParam()
     
-    @IBAction func testBtn(sender: UIButton) {
-        print(boySetting)
-        print(girlSetting)
-        print(situationSetting)
-        
-    }
+
     @IBAction func boySettingBtn(sender: UIButton) {
         
         self.performSegueWithIdentifier("showBoySetting", sender: self)
@@ -152,7 +147,7 @@ class SettingsViewController: UIViewController, UIPopoverPresentationControllerD
     }
     
     //config all the unwind segue
-    @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+     @IBAction override func unwindForSegue(unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
         
         if(unwindSegue.identifier != nil) {
             
